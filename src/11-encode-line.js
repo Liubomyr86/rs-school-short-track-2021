@@ -8,8 +8,8 @@
  * For aabbbc should return 2a3bc
  *
  */
-function encodeLine(/* str */) {
-  throw new Error('Not implemented');
+function encodeLine(str) {
+  return str.replace(/([a-z])\1*/g, (substring) => (substring.length > 1 ? substring.length + substring[0] : substring[0]));
 }
 
 module.exports = encodeLine;
